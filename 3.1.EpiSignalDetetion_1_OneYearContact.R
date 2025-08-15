@@ -2016,7 +2016,7 @@ coverage_data1 <- coverage_data_MCV1 %>%
     TRUE ~ CODE
   ))
 
-# Get world map data
+# World map data
 world <- ne_countries(scale = "medium", returnclass = "sf") %>%
   mutate(CODE_MAP = case_when(
     iso_a3 == "BHR" ~ "BMF",
@@ -2342,6 +2342,7 @@ ggplot(combined_data1) +
     axis.text.x = element_text(angle = 30, hjust = 1),
     legend.position = "bottom"
   )
+
 
 
 
